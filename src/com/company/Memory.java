@@ -31,7 +31,7 @@ public class Memory {
         this.mappedMemory = mappedMemory;
     }
 
-    public Memory(int start, int end) {
+    public Memory(int start, int end, Process process) {
         this.logical_address_start = start;
         this.logical_address_end = end;
     }

@@ -18,3 +18,6 @@ The idea is to create a simple interface to allow students to schedule processes
 that holds an array list of data. Each "cycle" on the CPU prints 1 number from a Process. Simulating how a CPU executes instructions. The queue just holds
 our processes. The students will write scheduler classes to pull a process from the queue. Put it on the CPU, and make the switches as necessary. 
 
+I'm currently adding a Memory class that will be used to store the data a 
+Process has. A process will be stored in memory, and will take up a 
+certain amount of memory cells. 
