@@ -40,5 +40,9 @@ public class Main {
         RR_Sched sched2 = new RR_Sched();
         sched2.run(queue);
 
+        //create core memory to populate
+        Memory core_memory = new Memory();
+        
+
     }
 }

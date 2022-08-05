@@ -7,6 +7,8 @@ public class Process {
     ArrayList<Integer> data = new ArrayList<>();
     int counter;
     String status;
+    int start_location;
+    int size;
 
     public int getId() {
         return id;
