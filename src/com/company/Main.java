@@ -42,7 +42,7 @@ public class Main {
 
         //sched1.run(queue);
 
-        RR_Sched sched2 = new RR_Sched();
+        RR_Sched sched2 = new RR_Sched(mem_man);
         sched2.run(queue);
 
         //create core memory to populate

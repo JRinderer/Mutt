@@ -9,6 +9,10 @@ public class MemoryCell {
         this.free = true;
     }
 
+    public boolean isFree() {
+        return free;
+    }
+
     public int getData(){
         return this.data;
     }

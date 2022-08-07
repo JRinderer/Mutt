@@ -19,6 +19,14 @@ public class Memory {
         return this.memory_cells[phys_addr].getData();
     }
 
+    public boolean get_free(int phys_addr){
+        return this.memory_cells[phys_addr].isFree();
+    }
+
+    public void free_memory(int phys_addr){
+        this.memory_cells[phys_addr].free_memory();
+    }
+
     public int write_data(int data){
         //once we've written data to memory we want to return that address
         int return_addr;

@@ -14,6 +14,24 @@ public class Memory_Manager {
     A process will be passed down, it's size will be determined by the memory manager
     */
 
+    public void free_process_mem(Process proc){
+        for(ProcTableEntry p : tables){
+            System.out.println("Physical address is: " + (this.RAM.get_data(p.getPhysical_addr().get(0))));
+            if (p.getProc().id == proc.id){
+                this.RAM.free_memory(this.RAM.get_data(p.getPhysical_addr().get(0)));
+                System.out.println("Ram is free for the physical address: " + this.RAM.get_data(p.getPhysical_addr().get(0)));
+            }
+        }
+        for(ProcTableEntry p : tables){
+            Process pr;
+            pr = p.getProc();
+            //System.out.println(pr.id);
+            //System.out.println(pr.data);
+            System.out.println("The ram at physical address: " + this.RAM.get_data(p.getPhysical_addr().get(0)) + "is: " + this.RAM.get_free(p.getPhysical_addr().get(0)));
+
+        }
+
+    }
 
     public void write_process(Process proc){
         /*first we need to write the process to memory
