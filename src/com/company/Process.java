@@ -48,7 +48,9 @@ public class Process {
     public Process(int id, ArrayList<Integer> data, int counter, String status) {
         this.id = id;
         this.data = data;
+        //this is where we should allocate memory
         this.counter = counter;
         this.status = status;
+        this.size = data.size();
     }
 }

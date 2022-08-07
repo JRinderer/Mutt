@@ -10,10 +10,14 @@ manager will actually get the request to allocate space for a process
 */
 public class Memory {
 
-    MemoryCell[] memory_cells = new MemoryCell[10];
-    int crnt_address;
-    int next_address;
-    int prev_address;
+    MemoryCell[] memory_cells = new MemoryCell[1000];
+    int crnt_address=0;
+    int next_address=this.crnt_address+1;
+    int prev_address=0;
+
+    public int get_data(int phys_addr){
+        return this.memory_cells[phys_addr].getData();
+    }
 
     public int write_data(int data){
         //once we've written data to memory we want to return that address
@@ -28,11 +32,15 @@ public class Memory {
         this.next_address = this.crnt_address + 2;
         //the current address is incremented by 1
         this.crnt_address++;
+        //we return the memory address the data was written to.
         return return_addr;
     }
 
 
     public Memory() {
+        for (int y = 0; y < 1000; y++) {
+            this.memory_cells[y] = new MemoryCell();
+        }
         this.crnt_address = 0;
         this.next_address = this.crnt_address + 1;
         this.prev_address = 0;
