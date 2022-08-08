@@ -7,6 +7,8 @@ public class Process {
     ArrayList<Integer> data = new ArrayList<>();
     int counter;
     String status;
+    int start_location;
+    int size;
 
     public int getId() {
         return id;
@@ -46,7 +48,9 @@ public class Process {
     public Process(int id, ArrayList<Integer> data, int counter, String status) {
         this.id = id;
         this.data = data;
+        //this is where we should allocate memory
         this.counter = counter;
         this.status = status;
+        this.size = data.size();
     }
 }
