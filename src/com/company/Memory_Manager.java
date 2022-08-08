@@ -16,6 +16,7 @@ public class Memory_Manager {
 
     public void free_process_mem(Process proc){
         for(ProcTableEntry p : tables){
+            System.out.println("The process is " + p.getProc().id);
             System.out.println("Physical address is: " + (this.RAM.get_data(p.getPhysical_addr().get(0))));
             if (p.getProc().id == proc.id){
                 this.RAM.free_memory(this.RAM.get_data(p.getPhysical_addr().get(0)));
