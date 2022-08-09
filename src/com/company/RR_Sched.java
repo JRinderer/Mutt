@@ -43,3 +43,5 @@ public class RR_Sched {
         this.mem_man = mem_man;
     }
 }
+
+//System.out.println("The physical address is: " + p.getPhysical_addr());

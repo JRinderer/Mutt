@@ -60,7 +60,7 @@ public class Memory_Manager {
             pr = p.getProc();
             //System.out.println(pr.id);
             //System.out.println(pr.data);
-            System.out.println("The physical address is: " + p.getPhysical_addr() + " and the data at this address is: " + this.RAM.get_data(p.getPhysical_addr().get(0)));
+            System.out.println("The physical address is: " + p.getPhysical_addr() + " and the data at this address is: " + this.RAM.get_data(p.getPhysical_addr().get(0)) + " for process: " + proc.getId());
         }
     }
 
